@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 </head>
 <body>
     <h1>Here</h1>
     <input type="text" id="textoIngresado" placeholder="Ingresa un texto">
     <button onclick="imprimirEnConsola()">Imprimir en la consola</button>
     <script src="script.js"></script>
+    <p id="hola"></p>
+    <button onclick="hola()">Click on me</button>
+    <p id="mostrarP"></p>
+    <select onchange="mostrar()" name="" id="">
+        <option id="Html" value="HTML">HTML</option>
+        <option id="Css" value="HTML">CSS</option>
+        <option id="Js" value="HTML">Javascript</option>
+        <option id="React" value="HTML">React</option>
+    </select>
+    <h1>Calculadora</h1>
+    <h2>Ejemplo en Javascript</h2>
+    <div>
+        <input type="text" id="pantallaResult">
+        <br>
+        <input type="button" value="1" onclick="Agregar('1')">
+        <input type="button" value="2" onclick="Agregar('2')">
+        <input type="button" value="3" onclick="Agregar('3')">
+        <input type="button" value="4" onclick="Agregar('4')">
+        <input type="button" value="5" onclick="Agregar('5')">
+        <input type="button" value="6" onclick="Agregar('6')">
+        <input type="button" value="7" onclick="Agregar('7')">
+        <input type="button" value="8" onclick="Agregar('8')">
+        <input type="button" value="9" onclick="Agregar('9')">
+        <input type="button" value="0" onclick="Agregar('0')">
+        <input type="button" value="+" onclick="Agregar('+')">
+        <input type="button" value="-" onclick="Agregar('-')">
+        <input type="button" value="/" onclick="Agregar('/')">
+        <input type="button" value="*" onclick="Agregar('*')">
+        <input type="button" value="=" onclick="Calcular()">
+        <input type="button" value="C" onclick="Borrar()">
+    </div>
+    <h1>Trabajando con lenguaje ensamblador</h1>
+    <div>
+        <p>.data
+            message: .asciiz "Hola, Mundo\n"
+        
+        .text
+            main:
+                # Imprimir el mensaje
+                li $v0, 4
+                la $a0, message
+                syscall
+        
+                # Salir del programa
+                li $v0, 10
+                syscall
+        </p>
+    </div>
 </body>
 </html>
+
